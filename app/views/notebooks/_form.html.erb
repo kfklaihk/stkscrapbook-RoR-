@@ -1,0 +1,54 @@
+<%= form_with(model: notebook, local: true) do |form| %>
+ <% unless notebook.nil? %>
+  <% if notebook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(notebook.errors.count, "error") %> prohibited this notebook from being saved:</h2>
+
+      <ul>
+      <% notebook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+  <% end %>
+<script>
+
+</script>
+  
+  <div class="field">
+    <span>Stock Code</span>
+    <%= form.text_field :stkcode ,:id=>'stkcode' %><%= link_to 'Check Stock Code Valid or not','#', :onclick => 'window.open("https://finance.yahoo.com/quote/"+$("#stkcode").val())' %>
+  </div>
+
+  <div class="field">
+  <span>Date(yyyy-mm-dd)</span>
+    <%= form.text_field :datme , 'data-mask': '0000-00-00', 'placeholder': '____/__/__',required: true %>
+  </div>
+
+  <div class="field">
+    <span>Title</span>
+    <%= form.text_field :title %>
+  </div>
+  
+  <div class="field">
+  <span>Sentiment</span>
+  <%= form.select :category, options_for_select([['Favorable', 'Favorable'], ['Neutral', 'Neutral'], ['Not Favorable', 'Not Favorable']])%>
+  </div>
+
+  <div class="field">
+  <span>Document format</span>
+  <%= form.select :fmt, options_for_select([['PDF', 'PDF'], ['TXT', 'TXT'], ['PIC', 'PIC'], ['VDO', 'VDO']])%>
+  </div>
+
+  <div class="field">
+  <span>Attach Document</span>
+  <%= form.file_field :attachment, multiple: false, direct_upload: true %>
+   
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<%= link_to 'Back', :controller => 'users',:id=>current_user.id, :action => 'notebooks' %>

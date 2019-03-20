@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stkscrapbook</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+  <footer>
+ <% unless current_user.nil? %>
+  <%= link_to '登出',{:controller => 'sessions', :id=>current_user.id,:action => 'destroy'},method: :delete %>
+ <% end %>
+</footer>
+</html>

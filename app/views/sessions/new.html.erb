@@ -1,0 +1,13 @@
+<h1>登录</h1>
+<%= form_for :session, url: sessions_path do |f| %>
+    <span>帳戶</span>
+    <%= f.text_field :userid %>
+
+    <span>密碼</span>
+    <%= f.password_field :password %>
+
+    <div class="actions">
+    <%= f.submit "登录" %>
+  </div>
+<% end %>
+<%= link_to '建立帳戶', new_user_path %>

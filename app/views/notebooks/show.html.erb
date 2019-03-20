@@ -1,0 +1,56 @@
+
+
+
+<%= form_with(model: @notebook, local: true) do |form| %>
+  <% if @notebook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@notebook.errors.count, "error") %> prohibited this notebook from being saved:</h2>
+
+      <ul>
+      <% @notebook.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <span>Stock Code:  </span>
+    <%= @notebook.stkcode %>
+  </div>
+
+  <div class="field">
+  <span>Date:  </span>
+    <%= @notebook.datme %>
+  </div>
+
+<div class="field">
+  <span>Title:  </span>
+    <%= @notebook.title %>
+  </div>
+  
+  <div class="field">
+  <span>Sentiment:  </span>
+  <%= @notebook.category %>
+  </div>
+
+  <div class="field">
+  <span>Document format:  </span>
+  <%= @notebook.fmt %>
+  </div>
+
+  <div class="field">
+  <span>Download Document:  </span>
+  <%= link_to 'Download Link', @notebook.fileurl %>
+  <%= link_to 'Preview',{:controller => 'notebooks',:id=>@notebook.id, :action => 'preview'} ,target: '_blank' %>
+  </div>
+
+  
+<% end %>
+
+<%= link_to 'Edit', edit_notebook_path(@notebook) %>
+<%= link_to 'Back', :controller => 'users',:id=>current_user.id, :action => 'notebooks' %>
+
+
+

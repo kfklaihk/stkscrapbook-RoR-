@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Preview Attachment</h1>
+<% if @notebook.fmt=="VDO" %>
+<video src="<%=url_for @notebook.fileurl %>" preload="auto" controls></video>
+<% end %>
+<% if @notebook.fmt=="PIC" %>
+<a href="<%=url_for @notebook.fileurl %>" class="media"></a>
+<% end %>
+<% if @notebook.fmt=="PDF" %>
+<embed src="<%=url_for @notebook.fileurl %>" width="600" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+
+<% end %>
+<script>
+$(function() {
+$('.media').media();
+});
+</script>

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>帳戶</h1>
+<h3><%= @user.userid %></h3>
+<table>
+  <thead>
+    <tr>
+      <th>股票</th>
+      <th>日期</th>
+      <th>標題</th>
+      <th>利好/利淡</th>
+      <th>格式</th>
+      <th>下載連結</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% unless @notebooks.nil? %>
+    <% @notebooks.each do |notebook| %>
+      <tr>
+      <td><%=  notebook.stkcode %></td>
+      <td><%= notebook.datme %></td>
+      <td><%= notebook.title %></td>
+      <td><%= notebook.category %></td>
+      <td><%= notebook.fmt %></td>
+      <td><%= notebook.fileurl %></td>
+        <td><%= link_to '顯示', notebook %></td>
+        <td><%= link_to '編輯', edit_notebook_path(notebook) %></td>
+        <td><%= link_to '刪除', notebook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Notebook', new_notebook_path %>

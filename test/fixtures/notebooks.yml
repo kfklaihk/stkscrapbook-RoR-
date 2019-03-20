@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userid: MyString
+  stkcode: MyString
+  datme: MyString
+  category: MyString
+  fmt: MyString
+  fileurl: MyString
+
+two:
+  userid: MyString
+  stkcode: MyString
+  datme: MyString
+  category: MyString
+  fmt: MyString
+  fileurl: MyString
