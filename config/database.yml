@@ -84,11 +84,11 @@ test:
 #
 production:
   <<: *default
-  database: stkscrapbook-production
+ # database: stkscrapbook-production
   host: <%= ENV['DB_HOST'] %>
-  post: 5432
   database: <%= ENV['DB_DATABASE']  %>
   username: <%= ENV['DB_USERNAME']  %>
   password: <%= ENV['DB_PASSWORD']  %>
+  post: 5432
 #  username: stkscrapbook
  # password: <%= ENV['STKSCRAPBOOK_DATABASE_PASSWORD'] %>
