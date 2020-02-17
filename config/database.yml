@@ -2,7 +2,7 @@ default:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  password: kev07117
+  password: xxxxxxx
   port: 5432
   username: postgres
 development: 
@@ -10,7 +10,7 @@ development:
   database: stkscrapbook_development
   encoding: unicode
   host: localhost
-  password: kev07117
+  password: xxxxxxx
   port: 5432
   username: postgres
 production: 
@@ -18,7 +18,7 @@ production:
   database: stkscrapbook-production
   encoding: unicode
   host: stkscrapbook-production.postgres.database.azure.com
-  password: Kev07117_
+  password: xxxxxxx
   post: 5432
   username: postgres@stkscrapbook-production
 test: 
@@ -26,6 +26,6 @@ test:
   database: stkscrapbook_test
   encoding: unicode
   host: localhost
-  password: kev07117
+  password: xxxxxxx
   port: 5432
   username: postgres
