@@ -24,8 +24,8 @@ local:
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 microsoft:
   service: AzureStorage
-  storage_account_name: cs12555ee8bf105x45f0xa15
-  storage_access_key: VOc9m5auzA8YzgQVbI7ib4HUHyZ1afooPgHGIL3IJFfOjEYGR8f8gL4WsQnF8zbzWCN/zAXKlSRjTan0FFQfww==
+  storage_account_name: cs134479o8bf105x45f0xa15
+  storage_access_key: VOc9m5auzA8YzgQVbI7ib4HUHyZ1afddsghpoGIL3IJFfOjEYGR8f8gL4WsQnF8zbzWCN/zAXKlSRjTan0FFQfww==
   container: kevinblob
 
 # mirror:
