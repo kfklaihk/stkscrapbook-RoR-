@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is sample code for Ruby-on-Rails for stock scrapbook site https://stkscrapbook.azurewebsites.net/sessions
+You need to register account to unlock the functions
+Site details can be referred to at self-explanatory site http://kevinshowcase.azurewebsites.net/
